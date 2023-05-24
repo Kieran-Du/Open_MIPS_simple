@@ -1,0 +1,3 @@
+Command Line: /opt/synopsys/verdi201809/platform/LINUXAMD64/bin/Novas -f file.list -ssf dump.fsdb -nolog
+uname(Linux host-virtual-machine 5.15.0-72-generic #79~20.04.1-Ubuntu SMP Thu Apr 20 22:12:07 UTC 2023 x86_64)
+au time 3676.249104 22.407630 6.418301 delta 830713856 830713856 total 1204232192 1204232192

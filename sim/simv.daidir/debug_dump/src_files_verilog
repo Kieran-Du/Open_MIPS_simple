@@ -1,0 +1,13 @@
+/home/host/Desktop/Open_MIPS_simple/rtl/definitions.v
+/home/host/Desktop/Open_MIPS_simple/rtl/ex.v
+/home/host/Desktop/Open_MIPS_simple/rtl/ex_mem.v
+/home/host/Desktop/Open_MIPS_simple/rtl/id.v
+/home/host/Desktop/Open_MIPS_simple/rtl/id_ex.v
+/home/host/Desktop/Open_MIPS_simple/rtl/if_id.v
+/home/host/Desktop/Open_MIPS_simple/rtl/mem.v
+/home/host/Desktop/Open_MIPS_simple/rtl/mem_wb.v
+/home/host/Desktop/Open_MIPS_simple/rtl/openmips.v
+/home/host/Desktop/Open_MIPS_simple/rtl/pc_reg.v
+/home/host/Desktop/Open_MIPS_simple/rtl/regfile.v
+/home/host/Desktop/Open_MIPS_simple/rtl/rom.v
+/home/host/Desktop/Open_MIPS_simple/tb/tb_openmips.v

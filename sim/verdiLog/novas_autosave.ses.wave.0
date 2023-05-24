@@ -1,0 +1,182 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1832 911 160 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/host/Desktop/Open_MIPS_simple/sim/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 634.125000
+cursor 270.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 128
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/host/Desktop/Open_MIPS_simple/sim/dump.fsdb"
+addSignal -h 15 /tb_openmips/clk
+addSignal -h 15 -holdScope rst
+addGroup "pc_reg" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/pc_reg_inst/pc[31:0]
+addSignal -h 15 -holdScope ce
+addGroup "if_id" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/if_id_inst/if_pc[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope if_inst[31:0]
+addSignal -h 15 -holdScope id_pc[31:0]
+addSignal -h 15 -holdScope id_inst[31:0]
+addGroup "id" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/id_inst0/pc_i[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope inst_i[31:0]
+addSignal -h 15 -holdScope op[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope imm[31:0]
+addSignal -h 15 -holdScope reg1_data_i[31:0]
+addSignal -h 15 -holdScope reg2_data_i[31:0]
+addSignal -h 15 -holdScope reg1_read_o
+addSignal -h 15 -holdScope reg2_read_o
+addSignal -h 15 -holdScope reg1_addr_o[4:0]
+addSignal -h 15 -holdScope reg2_addr_o[4:0]
+addSignal -h 15 -holdScope aluop_o[7:0]
+addSignal -h 15 -holdScope alusel_o[2:0]
+addSignal -h 15 -holdScope reg1_o[31:0]
+addSignal -h 15 -holdScope reg2_o[31:0]
+addSignal -h 15 -holdScope wd_o[4:0]
+addSignal -h 15 -holdScope wreg_o
+addGroup "id_ex" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/id_ex_inst/id_aluop[7:0]
+addSignal -h 15 -holdScope id_alusel[2:0]
+addSignal -h 15 -holdScope id_reg1[31:0]
+addSignal -h 15 -holdScope id_reg2[31:0]
+addSignal -h 15 -holdScope id_wd[4:0]
+addSignal -h 15 -holdScope id_wreg
+addSignal -h 15 -holdScope ex_aluop[7:0]
+addSignal -h 15 -holdScope ex_alusel[2:0]
+addSignal -h 15 -holdScope ex_reg1[31:0]
+addSignal -h 15 -holdScope ex_reg2[31:0]
+addSignal -h 15 -holdScope ex_wd[4:0]
+addSignal -h 15 -holdScope ex_wreg
+addGroup "ex" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/ex_inst/aluop_i[7:0]
+addSignal -h 15 -holdScope alusel_i[2:0]
+addSignal -h 15 -holdScope reg1_i[31:0]
+addSignal -h 15 -holdScope reg2_i[31:0]
+addSignal -h 15 -holdScope wd_i[4:0]
+addSignal -h 15 -holdScope wreg_i
+addSignal -h 15 -holdScope wd_o[4:0]
+addSignal -h 15 -holdScope wreg_o
+addSignal -h 15 -holdScope wdata_o[31:0]
+addGroup "ex_mem" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/ex_mem_inst/ex_wd[4:0]
+addSignal -h 15 -holdScope ex_wreg
+addSignal -h 15 -holdScope ex_wdata[31:0]
+addSignal -h 15 -holdScope men_wd[4:0]
+addSignal -h 15 -holdScope men_wreg
+addSignal -h 15 -holdScope men_wdata[31:0]
+addGroup "mem" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/mem_inst/wd_i[4:0]
+addSignal -h 15 -holdScope wreg_i
+addSignal -h 15 -holdScope wdata_i[31:0]
+addSignal -h 15 -holdScope wd_o[4:0]
+addSignal -h 15 -holdScope wreg_o
+addSignal -h 15 -holdScope wdata_o[31:0]
+addGroup "mem_wb" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/mem_wb_inst/men_wd[4:0]
+addSignal -h 15 -holdScope men_wreg
+addSignal -h 15 -holdScope men_wdata[31:0]
+addSignal -h 15 -holdScope wb_wd[4:0]
+addSignal -h 15 -holdScope wb_wreg
+addSignal -h 15 -holdScope wb_wdata[31:0]
+addGroup "regfiles"
+addSignal -expanded -h 15 /tb_openmips/u_openmips/regfile_inst/regs[0:31]
+addSignal -h 15 -holdScope regs[0][31:0]
+addSignal -h 15 -holdScope regs[1][31:0]
+addSignal -h 15 -holdScope regs[2][31:0]
+addSignal -h 15 -holdScope regs[3][31:0]
+addSignal -h 15 -holdScope regs[4][31:0]
+addSignal -h 15 -holdScope regs[5][31:0]
+addSignal -h 15 -holdScope regs[6][31:0]
+addSignal -h 15 -holdScope regs[7][31:0]
+addSignal -h 15 -holdScope regs[8][31:0]
+addSignal -h 15 -holdScope regs[9][31:0]
+addSignal -h 15 -holdScope regs[10][31:0]
+addSignal -h 15 -holdScope regs[11][31:0]
+addSignal -h 15 -holdScope regs[12][31:0]
+addSignal -h 15 -holdScope regs[13][31:0]
+addSignal -h 15 -holdScope regs[14][31:0]
+addSignal -h 15 -holdScope regs[15][31:0]
+addSignal -h 15 -holdScope regs[16][31:0]
+addSignal -h 15 -holdScope regs[17][31:0]
+addSignal -h 15 -holdScope regs[18][31:0]
+addSignal -h 15 -holdScope regs[19][31:0]
+addSignal -h 15 -holdScope regs[20][31:0]
+addSignal -h 15 -holdScope regs[21][31:0]
+addSignal -h 15 -holdScope regs[22][31:0]
+addSignal -h 15 -holdScope regs[23][31:0]
+addSignal -h 15 -holdScope regs[24][31:0]
+addSignal -h 15 -holdScope regs[25][31:0]
+addSignal -h 15 -holdScope regs[26][31:0]
+addSignal -h 15 -holdScope regs[27][31:0]
+addSignal -h 15 -holdScope regs[28][31:0]
+addSignal -h 15 -holdScope regs[29][31:0]
+addSignal -h 15 -holdScope regs[30][31:0]
+addSignal -h 15 -holdScope regs[31][31:0]
+addSignal -h 15 -holdScope we
+addSignal -h 15 -holdScope waddr[4:0]
+addSignal -h 15 -holdScope wdata[31:0]
+addSignal -h 15 -holdScope re1
+addSignal -h 15 -holdScope raddr1[4:0]
+addSignal -h 15 -holdScope rdata1[31:0]
+addSignal -h 15 -holdScope re2
+addSignal -h 15 -holdScope raddr2[4:0]
+addSignal -h 15 -holdScope rdata2[31:0]
+addGroup "rom" -e FALSE
+addSignal -h 15 /tb_openmips/u_rom/rom_addr_i[31:0]
+addSignal -h 15 -holdScope rom_ce_o
+addSignal -h 15 -holdScope rom_data_o[31:0]
+addSignal -h 15 -holdScope mem[0:131071]
+addGroup "top" -e FALSE
+addSignal -h 15 /tb_openmips/u_openmips/rom_data_i[31:0]
+addSignal -h 15 -holdScope rom_addr_o[31:0]
+addSignal -h 15 -holdScope rom_ce_o
+addGroup "tb"
+addSignal -h 15 /tb_openmips/rom_data[31:0]
+addSignal -h 15 -holdScope rom_addr[31:0]
+addSignal -h 15 -holdScope rom_ce
+addGroup "G14" -e FALSE
+addGroup "G15" -e FALSE
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

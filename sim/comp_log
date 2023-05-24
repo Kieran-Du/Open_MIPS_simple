@@ -1,0 +1,15 @@
+Command: vcs -full64 -debug_acc+all -LDFLAGS -Wl,--no-as-needed -sverilog -l comp_log \
+-f file.list
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Wed May 24 20:40:02 2023
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file simv.daidir/.vcs.timestamp and
+run VCS again.
+
