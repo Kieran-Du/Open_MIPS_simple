@@ -1,3 +1,0 @@
-stop -line 6 -file /home/host/Desktop/Open_MIPS_simple/rtl/pc_reg.v 
-stop -line 41 -file /home/host/Desktop/Open_MIPS_simple/rtl/openmips.v 
-stop -line 42 -file /home/host/Desktop/Open_MIPS_simple/rtl/openmips.v 
